@@ -16,7 +16,7 @@ class ProductoApi(viewsets.ModelViewSet):
 @api_view(['GET'])
 def producto_detail_view(request,pk=None):
     if request.method == 'GET':
-        producto = Producto.objects.filter(id_prod=pk).first()
+        producto = Producto.objects.filter(nombre_pro=pk).first()
         if producto == None:
             return Response("No existe producto.")
         else:

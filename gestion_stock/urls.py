@@ -11,6 +11,6 @@ router.register("Producto",views.ProductoApi, basename="producto")
 
 urlpatterns = [
     path('',include(router.urls)),
-    path('stk_get/<int:pk>/', producto_detail_view, name= "producto_detail_view"),
+    path('stk_get/<str:pk>/', producto_detail_view, name= "producto_detail_view"),
     path('stk_patch/<int:pk>/', producto_patch, name= "producto_patch"),
 ]

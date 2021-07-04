@@ -8,7 +8,18 @@ from rest_framework.views import APIView
 from django.shortcuts import render
 import requests
 from django.views.generic import ListView, TemplateView
-
+from django.shortcuts import render
+from rest_framework import viewsets
+from django.views.generic import ListView, TemplateView
+from django.http import HttpResponseRedirect
+from rest_framework.generics import (
+    ListAPIView,
+    CreateAPIView,
+    RetrieveAPIView,
+    DestroyAPIView,
+    UpdateAPIView,
+    RetrieveUpdateAPIView,
+)
 class ProductoApi(viewsets.ModelViewSet):
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
